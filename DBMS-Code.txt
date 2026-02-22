@@ -1,0 +1,78 @@
+CREATE TABLE Customer_mst (
+    Customer_ID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Email VARCHAR(50),
+    Phone VARCHAR(15),
+    Address VARCHAR(100)
+);
+
+
+
+
+CREATE TABLE Restaurant_mst (
+    Rest_ID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Location VARCHAR(50),
+    Phone VARCHAR(15),
+    Rating INT
+);
+
+
+
+
+CREATE TABLE Food_mst (
+    Food_ID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Price INT,
+    Category VARCHAR(50),
+    Rest_ID INT
+);
+
+
+
+
+CREATE TABLE Order_mst (
+    Order_ID INT PRIMARY KEY,
+    Amount INT,
+    Date DATE,
+    Status VARCHAR(50),
+    Customer_ID INT
+);
+
+
+
+
+CREATE TABLE Delivery_mst (
+    Delivery_ID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Phone VARCHAR(15),
+    Vehicle VARCHAR(50),
+    Status VARCHAR(50),
+    Address VARCHAR(100)
+);
+
+
+
+CREATE TABLE Payment_mst (
+    Payment_ID INT PRIMARY KEY,
+    Method VARCHAR(50),
+    Amount INT,
+    Status VARCHAR(50),
+    Order_ID INT
+);
+
+
+
+
+
+INSERT INTO Customer_mst VALUES (1,'Vishal','v@gmail.com','9876543210','Delhi');
+
+INSERT INTO Restaurant_mst VALUES (1,'Pizza Hut','Delhi','9999999999',5);
+
+INSERT INTO Food_mst VALUES (1,'Pizza',250,'Fast Food',1);
+
+INSERT INTO Order_mst VALUES (1,250,'2026-02-22','Delivered',1);
+
+INSERT INTO Delivery_mst VALUES (1,'Ramesh','8888888888','Bike','Active','Delhi');
+
+INSERT INTO Payment_mst VALUES (1,'UPI',250,'Paid',1);
