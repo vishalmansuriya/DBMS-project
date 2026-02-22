@@ -63,5 +63,6 @@ Columns:
 - Managing data in MySQL
 
 ## 👨‍💻 Author
-Vishal Mansuriya  
+Vishal Mansuriya
+Amar Singh Yadav
 IILM University Greater Noida
