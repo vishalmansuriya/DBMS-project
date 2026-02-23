@@ -7,6 +7,8 @@
 
 # Online Food Delivery System — DBMS Project
 
+![ER Diagram](ER%20diagram/DBMS_ER_Diagram.drawio.png)
+
 ## Introduction
 
 This project is about an Online Food Delivery System.  
