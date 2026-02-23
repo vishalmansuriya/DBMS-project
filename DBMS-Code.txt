@@ -63,7 +63,6 @@ CREATE TABLE Payment_mst (
 
 
 
-
 Sample Data:-
 
 INSERT INTO Customer_mst VALUES (1,'Vishal','v@gmail.com','9876543210','Delhi');
