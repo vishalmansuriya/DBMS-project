@@ -5,6 +5,8 @@
 **Anurag**  
 **Siddhant**
 
+**Section:** **2CSE10**
+
 # Online Food Delivery System — DBMS Project
 
 ![ER Diagram](ER%20Dirgram.png)
@@ -12,17 +14,6 @@
 # Online Food Delivery System
 
 ## Database Management System (DBMS) Project
-
----
-
-##  Team Members
-
-* **Vishal Mansuriya** — 2410030220
-* **Amar Singh Yadav** — 2410030145
-* **Anurag**
-* **Siddhant**
-
-**Section:** __________
 
 ---
 
@@ -265,7 +256,7 @@ This project helps in understanding database design, relationships, and implemen
 
 # 👨‍💻 Authors
 
-**Vishal Mansuriya**
-**Amar Singh Yadav**
+**Vishal Mansuriya**  
+**Amar Singh Yadav**  
 
 ---
