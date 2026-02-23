@@ -1,6 +1,6 @@
 # DBMS Project
 
-# 🍔 Online Food Delivery System — DBMS Project
+# Online Food Delivery System — DBMS Project
 
 ## Introduction
 
