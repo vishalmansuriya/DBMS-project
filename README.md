@@ -2,19 +2,12 @@
 ## Team Member
 **Vishal Mansuriya**  -  2410030220  
 **Amar Singh Yadav**  -  2410030145  
-**Anurag**  
-**Siddhant**
+**Anurag**  -  2410030069  
+**Siddhant**  -  25scs1003004724
 
-**Section:** **2CSE10**
+**Section :-** **2CSE10**
 
-# Online Food Delivery System — DBMS Project
-
-![ER Diagram](ER%20Dirgram.png)
-
-# Online Food Delivery System
-
-## Database Management System (DBMS) Project
-
+## Online Food Delivery System — DBMS Project
 ---
 
 ## 📊 ER Diagram
@@ -23,7 +16,7 @@
 
 ---
 
-# 📖 Introduction
+# Introduction
 
 The Online Food Delivery System is a database project designed to manage customer orders, restaurant information, food items, delivery services, and payment records.
 
@@ -33,7 +26,7 @@ The ER (Entity Relationship) model represents the logical structure of the syste
 
 ---
 
-# 🎯 Objective
+# Objective
 
 The main objectives of this project are:
 
@@ -46,7 +39,7 @@ The main objectives of this project are:
 
 ---
 
-# 🧩 List of Entities
+# List of Entities
 
 1. CUSTOMER
 2. RESTAURANT
@@ -57,7 +50,7 @@ The main objectives of this project are:
 
 ---
 
-# 📦 Entity Description with Attributes
+# Entity Description with Attributes
 
 ---
 
@@ -211,13 +204,13 @@ Represents payment details for orders.
 
 ---
 
-# ⭐ Central Entity
+# Central Entity
 
 The **ORDER** entity is the most important part of the system because it connects customers, food items, delivery, and payments together.
 
 ---
 
-# ✅ Advantages
+# Advantages
 
 * Easy data management
 * Order tracking capability
@@ -227,7 +220,7 @@ The **ORDER** entity is the most important part of the system because it connect
 
 ---
 
-# 🔑 Primary Keys
+# Primary Keys
 
 * CUSTOMER → customer_id
 * RESTAURANT → rest_id
@@ -238,7 +231,7 @@ The **ORDER** entity is the most important part of the system because it connect
 
 ---
 
-# 🔗 Foreign Keys
+# Foreign Keys
 
 * FOOD.rest_id → RESTAURANT.rest_id
 * ORDER.customer_id → CUSTOMER.customer_id
@@ -246,7 +239,7 @@ The **ORDER** entity is the most important part of the system because it connect
 
 ---
 
-# 📌 Conclusion
+# Conclusion
 
 The Online Food Delivery System ER model provides a clear representation of how different entities interact with each other in a database environment.
 
@@ -256,7 +249,7 @@ This project helps in understanding database design, relationships, and implemen
 
 # 👨‍💻 Authors
 
-**Vishal Mansuriya**  
-**Amar Singh Yadav**  
+**Vishal Mansuriya**   
+**Amar Singh Yadav**    
 
 ---
