@@ -9,86 +9,263 @@
 
 ![ER Diagram](ER%20Dirgram.png)
 
-## Introduction
+# Online Food Delivery System
 
-This project is about an Online Food Delivery System.  
-It is designed to store and manage information related to customers, restaurants, food items, orders, delivery, and payments using a database.
-
-The purpose of this project is to understand how database systems work in real-life applications.
+## Database Management System (DBMS) Project
 
 ---
 
-## Objective
+##  Team Members
 
-The main objective of this project is:
+* **Vishal Mansuriya** — 2410030220
+* **Amar Singh Yadav** — 2410030145
+* **Anurag**
+* **Siddhant**
 
-- To manage customer details
-- To store restaurant and food information
-- To record orders placed by customers
-- To manage delivery information
-- To store payment details
-
----
-
-## Main Entities
-
-The system has six main parts:
-
-1. **Customer** – stores customer information like name, email, phone, and address.  
-2. **Restaurant** – stores restaurant details.  
-3. **Food Item** – stores food name, price, and category.  
-4. **Order** – stores order details and is the main part of the system.  
-5. **Delivery** – stores delivery person information.  
-6. **Payment** – stores payment details for each order.  
+**Section:** __________
 
 ---
 
-## Relationships
+## 📊 ER Diagram
 
-- One customer can place many orders.
-- One restaurant can provide many food items.
-- An order contains food items.
-- Each order has one payment.
-- One delivery person can deliver many orders.
+![ER Diagram](ER%20Dirgram.png)
 
 ---
 
-## How the System Works
+# 📖 Introduction
 
-1. A customer places an order.
-2. The order includes food from a restaurant.
-3. The system stores order information.
-4. A delivery person delivers the order.
-5. The customer makes payment.
-6. All data is saved in the database.
+The Online Food Delivery System is a database project designed to manage customer orders, restaurant information, food items, delivery services, and payment records.
 
----
+This project demonstrates how database concepts such as tables, relationships, primary keys, and foreign keys are used in real-life applications.
 
-## Central Entity
-
-The **Order** is the main part of the system because it connects customers, food, delivery, and payment together.
+The ER (Entity Relationship) model represents the logical structure of the system including entities, attributes, and relationships.
 
 ---
 
-## Advantages
+# 🎯 Objective
 
-- Easy to manage data
-- Helps track orders
-- Reduces data repetition
-- Useful for real-world applications
+The main objectives of this project are:
 
----
-
-## Conclusion
-
-This project shows how database concepts like tables, relationships, primary keys, and foreign keys can be used to create an Online Food Delivery System.
-
-It helps in understanding how databases are used in real life.
+* To manage customer details
+* To store restaurant and food information
+* To record orders placed by customers
+* To manage delivery information
+* To store payment details
+* To understand real-world database implementation
 
 ---
 
-## 👨‍💻 Author
+# 🧩 List of Entities
 
-**Vishal Mansuriya**  
-**Amar Singh Yadav**  
-IILM University, Greater Noida
+1. CUSTOMER
+2. RESTAURANT
+3. FOOD
+4. ORDER
+5. DELIVERY
+6. PAYMENT
+
+---
+
+# 📦 Entity Description with Attributes
+
+---
+
+## CUSTOMER
+
+Represents users who place food orders.
+
+**Attributes:**
+
+* customer_id (Primary Key)
+* name
+* email
+* phone
+* address
+
+---
+
+## RESTAURANT
+
+Represents restaurants available in the system.
+
+**Attributes:**
+
+* rest_id (Primary Key)
+* name
+* location
+* phone
+* rating
+
+---
+
+## FOOD
+
+Represents food items provided by restaurants.
+
+**Attributes:**
+
+* food_id (Primary Key)
+* name
+* price
+* category
+* rest_id (Foreign Key → RESTAURANT.rest_id)
+
+---
+
+## ORDER
+
+Represents orders placed by customers and acts as the central entity.
+
+**Attributes:**
+
+* order_id (Primary Key)
+* amount
+* date
+* status
+* customer_id (Foreign Key → CUSTOMER.customer_id)
+
+---
+
+## DELIVERY
+
+Represents delivery personnel information.
+
+**Attributes:**
+
+* delivery_id (Primary Key)
+* name
+* phone
+* vehicle
+* status
+* address
+
+---
+
+## PAYMENT
+
+Represents payment details for orders.
+
+**Attributes:**
+
+* payment_id (Primary Key)
+* method
+* amount
+* status
+* order_id (Foreign Key → ORDER.order_id)
+
+---
+
+# 🔗 Relationships
+
+---
+
+## 1️⃣ PLACES
+
+**Between:** CUSTOMER and ORDER
+**Type:** One-to-Many (1:M)
+
+* One customer can place multiple orders.
+* Each order belongs to one customer.
+
+---
+
+## 2️⃣ PROVIDES
+
+**Between:** RESTAURANT and FOOD
+**Type:** One-to-Many (1:M)
+
+* One restaurant can provide many food items.
+* Each food item belongs to one restaurant.
+
+---
+
+## 3️⃣ CONTAINS
+
+**Between:** ORDER and FOOD
+**Type:** Many-to-Many (M:N)
+
+* One order can contain multiple food items.
+* One food item can appear in multiple orders.
+
+---
+
+## 4️⃣ DELIVERED_BY
+
+**Between:** DELIVERY and ORDER
+**Type:** One-to-Many (1:M)
+
+* One delivery person can deliver many orders.
+* Each order is delivered by one delivery person.
+
+---
+
+## 5️⃣ HAS
+
+**Between:** ORDER and PAYMENT
+**Type:** One-to-One (1:1)
+
+* Each order has one payment record.
+* Each payment belongs to one order.
+
+---
+
+# ⚙️ How the System Works
+
+1. A customer places an order from a restaurant.
+2. The order contains selected food items.
+3. The system stores order details in the database.
+4. A delivery person is assigned to deliver the order.
+5. The customer makes payment for the order.
+6. All information is stored and managed using database tables.
+
+---
+
+# ⭐ Central Entity
+
+The **ORDER** entity is the most important part of the system because it connects customers, food items, delivery, and payments together.
+
+---
+
+# ✅ Advantages
+
+* Easy data management
+* Order tracking capability
+* Reduced data redundancy
+* Structured database design
+* Useful for real-world applications
+
+---
+
+# 🔑 Primary Keys
+
+* CUSTOMER → customer_id
+* RESTAURANT → rest_id
+* FOOD → food_id
+* ORDER → order_id
+* DELIVERY → delivery_id
+* PAYMENT → payment_id
+
+---
+
+# 🔗 Foreign Keys
+
+* FOOD.rest_id → RESTAURANT.rest_id
+* ORDER.customer_id → CUSTOMER.customer_id
+* PAYMENT.order_id → ORDER.order_id
+
+---
+
+# 📌 Conclusion
+
+The Online Food Delivery System ER model provides a clear representation of how different entities interact with each other in a database environment.
+
+This project helps in understanding database design, relationships, and implementation of DBMS concepts in real-world scenarios.
+
+---
+
+# 👨‍💻 Authors
+
+**Vishal Mansuriya**
+**Amar Singh Yadav**
+
+---
