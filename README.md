@@ -1,4 +1,4 @@
-# DBMS-project
+# DBMS Project
 
 # 🍔 Online Food Delivery System — DBMS Project
 
@@ -27,12 +27,12 @@ The main objective of this project is:
 
 The system has six main parts:
 
-1. **Customer** – stores customer information like name, email, phone, and address.
-2. **Restaurant** – stores restaurant details.
-3. **Food Item** – stores food name, price, and category.
-3. **Order** – stores order details and is the main part of the system.
-5. **Delivery** – stores delivery person information.
-6. **Payment** – stores payment details for each order.
+1. **Customer** – stores customer information like name, email, phone, and address.  
+2. **Restaurant** – stores restaurant details.  
+3. **Food Item** – stores food name, price, and category.  
+4. **Order** – stores order details and is the main part of the system.  
+5. **Delivery** – stores delivery person information.  
+6. **Payment** – stores payment details for each order.  
 
 ---
 
@@ -82,6 +82,6 @@ It helps in understanding how databases are used in real life.
 
 ## 👨‍💻 Author
 
-Vishal Mansuriya 
-Amar Singh Yadav 
-IILM University Greater Noida
+**Vishal Mansuriya**  
+**Amar Singh Yadav**  
+IILM University, Greater Noida
