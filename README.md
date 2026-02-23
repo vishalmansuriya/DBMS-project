@@ -1,4 +1,9 @@
-# DBMS Project
+# DBMS Project 
+## Team Member
+**Vishal Mansuriya**  -  2410030220  
+**Amar Singh Yadav**  -  2410030145  
+**Anurag**  
+**Siddhant**
 
 # Online Food Delivery System — DBMS Project
 
