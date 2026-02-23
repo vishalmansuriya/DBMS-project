@@ -1,5 +1,6 @@
-# Online Food Delivery System — DBMS Project
-## Team Member
+# 🍔 Online Food Delivery System — DBMS Project
+
+## 👥 Team Member
 **Vishal Mansuriya**  -  2410030220  
 **Amar Singh Yadav**  -  2410030145  
 **Anurag**  -  2410030069  
@@ -15,7 +16,7 @@
 
 ---
 
-# Introduction
+# 📌 Introduction
 
 The Online Food Delivery System is a database project designed to manage customer orders, restaurant information, food items, delivery services, and payment records.
 
@@ -25,7 +26,7 @@ The ER (Entity Relationship) model represents the logical structure of the syste
 
 ---
 
-# Objective
+# 🎯 Objective
 
 The main objectives of this project are:
 
@@ -38,7 +39,7 @@ The main objectives of this project are:
 
 ---
 
-# List of Entities
+# 🧩 List of Entities
 
 1. CUSTOMER
 2. RESTAURANT
@@ -49,11 +50,11 @@ The main objectives of this project are:
 
 ---
 
-# Entity Description with Attributes
+# 📖 Entity Description with Attributes
 
 ---
 
-## CUSTOMER
+## 👤 CUSTOMER
 
 Represents users who place food orders.
 
@@ -67,7 +68,7 @@ Represents users who place food orders.
 
 ---
 
-## RESTAURANT
+## 🏪 RESTAURANT
 
 Represents restaurants available in the system.
 
@@ -81,7 +82,7 @@ Represents restaurants available in the system.
 
 ---
 
-## FOOD
+## 🍕 FOOD
 
 Represents food items provided by restaurants.
 
@@ -95,7 +96,7 @@ Represents food items provided by restaurants.
 
 ---
 
-## ORDER
+## 🧾 ORDER
 
 Represents orders placed by customers and acts as the central entity.
 
@@ -109,7 +110,7 @@ Represents orders placed by customers and acts as the central entity.
 
 ---
 
-## DELIVERY
+## 🚚 DELIVERY
 
 Represents delivery personnel information.
 
@@ -124,7 +125,7 @@ Represents delivery personnel information.
 
 ---
 
-## PAYMENT
+## 💳 PAYMENT
 
 Represents payment details for orders.
 
@@ -144,7 +145,7 @@ Represents payment details for orders.
 
 ## 1️⃣ PLACES
 
-**Between:** CUSTOMER and ORDER
+**Between:** CUSTOMER and ORDER  
 **Type:** One-to-Many (1:M)
 
 * One customer can place multiple orders.
@@ -154,7 +155,7 @@ Represents payment details for orders.
 
 ## 2️⃣ PROVIDES
 
-**Between:** RESTAURANT and FOOD
+**Between:** RESTAURANT and FOOD  
 **Type:** One-to-Many (1:M)
 
 * One restaurant can provide many food items.
@@ -164,7 +165,7 @@ Represents payment details for orders.
 
 ## 3️⃣ CONTAINS
 
-**Between:** ORDER and FOOD
+**Between:** ORDER and FOOD  
 **Type:** Many-to-Many (M:N)
 
 * One order can contain multiple food items.
@@ -174,7 +175,7 @@ Represents payment details for orders.
 
 ## 4️⃣ DELIVERED_BY
 
-**Between:** DELIVERY and ORDER
+**Between:** DELIVERY and ORDER  
 **Type:** One-to-Many (1:M)
 
 * One delivery person can deliver many orders.
@@ -184,7 +185,7 @@ Represents payment details for orders.
 
 ## 5️⃣ HAS
 
-**Between:** ORDER and PAYMENT
+**Between:** ORDER and PAYMENT  
 **Type:** One-to-One (1:1)
 
 * Each order has one payment record.
@@ -203,13 +204,13 @@ Represents payment details for orders.
 
 ---
 
-# Central Entity
+# ⭐ Central Entity
 
 The **ORDER** entity is the most important part of the system because it connects customers, food items, delivery, and payments together.
 
 ---
 
-# Advantages
+# ✅ Advantages
 
 * Easy data management
 * Order tracking capability
@@ -219,7 +220,7 @@ The **ORDER** entity is the most important part of the system because it connect
 
 ---
 
-# Primary Keys
+# 🔑 Primary Keys
 
 * CUSTOMER → customer_id
 * RESTAURANT → rest_id
@@ -230,7 +231,7 @@ The **ORDER** entity is the most important part of the system because it connect
 
 ---
 
-# Foreign Keys
+# 🔐 Foreign Keys
 
 * FOOD.rest_id → RESTAURANT.rest_id
 * ORDER.customer_id → CUSTOMER.customer_id
@@ -238,7 +239,7 @@ The **ORDER** entity is the most important part of the system because it connect
 
 ---
 
-# Conclusion
+# 📌 Conclusion
 
 The Online Food Delivery System ER model provides a clear representation of how different entities interact with each other in a database environment.
 
