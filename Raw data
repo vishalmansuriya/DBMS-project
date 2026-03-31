@@ -1,0 +1,44 @@
+1) DATABASE
+CREATE DATABASE food_delivery; USE food_delivery;
+
+2) CUSTOMER TABLE
+CREATE TABLE CUSTOMER ( customer_id INT PRIMARY KEY, customer_name VARCHAR(50), phone VARCHAR(15), address VARCHAR(100), city VARCHAR(50) );
+
+3) RESTAURANT TABLE
+CREATE TABLE RESTAURANT ( rest_id INT PRIMARY KEY, rest_name VARCHAR(50), location VARCHAR(100), phone VARCHAR(15) );
+
+4) FOOD TABLE
+CREATE TABLE FOOD ( food_id INT PRIMARY KEY, food_name VARCHAR(50), price DECIMAL(10,2), category VARCHAR(30), rest_id INT, FOREIGN KEY (rest_id) REFERENCES RESTAURANT(rest_id) );
+
+5) ORDERS TABLE
+CREATE TABLE ORDERS ( order_id INT PRIMARY KEY, customer_id INT, order_date DATE, total_amount DECIMAL(10,2), status VARCHAR(20), FOREIGN KEY (customer_id) REFERENCES CUSTOMER(customer_id) );
+
+6) ORDER_ITEMS TABLE
+CREATE TABLE ORDER_ITEMS ( order_item_id INT PRIMARY KEY, order_id INT, food_id INT, quantity INT, subtotal DECIMAL(10,2), FOREIGN KEY (order_id) REFERENCES ORDERS(order_id), FOREIGN KEY (food_id) REFERENCES FOOD(food_id) );
+
+7) DELIVERY TABLE
+CREATE TABLE DELIVERY ( delivery_id INT PRIMARY KEY, order_id INT, delivery_person VARCHAR(50), delivery_status VARCHAR(20), delivery_time VARCHAR(30), FOREIGN KEY (order_id) REFERENCES ORDERS(order_id) );
+
+8) PAYMENT TABLE
+CREATE TABLE PAYMENT ( payment_id INT PRIMARY KEY, order_id INT, payment_method VARCHAR(20), payment_status VARCHAR(20), amount DECIMAL(10,2), FOREIGN KEY (order_id) REFERENCES ORDERS(order_id) );
+
+9) INSERT CUSTOMER DATA
+INSERT INTO CUSTOMER VALUES (1, 'Amar Singh', '9876543210', 'Civil Lines', 'Prayagraj'), (2, 'Vishal Kumar', '9123456780', 'Katra', 'Prayagraj'), (3, 'Rohan Yadav', '9988776655', 'Allahpur', 'Prayagraj'), (4, 'Anjali Sharma', '9871234567', 'Lukarganj', 'Prayagraj'), (5, 'Priya Singh', '9012345678', 'Naini', 'Prayagraj');
+
+10) INSERT RESTAURANT DATA
+INSERT INTO RESTAURANT VALUES (101, 'Pizza Hub', 'Civil Lines', '8800112233'), (102, 'Burger Point', 'Katra', '8811223344'), (103, 'Biryani House', 'Allahpur', '8822334455'), (104, 'Food Express', 'Naini', '8833445566');
+
+11) INSERT FOOD DATA
+INSERT INTO FOOD VALUES (1001, 'Margherita Pizza', 250.00, 'Pizza', 101), (1002, 'Cheese Pizza', 350.00, 'Pizza', 101), (1003, 'Veg Burger', 120.00, 'Burger', 102), (1004, 'Chicken Burger', 180.00, 'Burger', 102), (1005, 'Chicken Biryani', 220.00, 'Biryani', 103), (1006, 'Veg Biryani', 180.00, 'Biryani', 103), (1007, 'Cold Drink', 50.00, 'Beverage', 104), (1008, 'French Fries', 90.00, 'Snacks', 104);
+
+12) INSERT ORDERS DATA
+INSERT INTO ORDERS VALUES (201, 1, '2026-03-20', 400.00, 'Delivered'), (202, 2, '2026-03-21', 300.00, 'Delivered'), (203, 3, '2026-03-22', 320.00, 'Pending'), (204, 4, '2026-03-23', 490.00, 'Delivered'), (205, 5, '2026-03-24', 270.00, 'Preparing');
+
+13) INSERT ORDER_ITEMS DATA
+INSERT INTO ORDER_ITEMS VALUES (1, 201, 1001, 1, 250.00), (2, 201, 1007, 3, 150.00), (3, 202, 1003, 1, 120.00), (4, 202, 1008, 2, 180.00), (5, 203, 1006, 1, 180.00), (6, 203, 1007, 1, 50.00), (7, 203, 1008, 1, 90.00), (8, 204, 1002, 1, 350.00), (9, 204, 1007, 1, 50.00), (10, 204, 1008, 1, 90.00), (11, 205, 1005, 1, 220.00), (12, 205, 1007, 1, 50.00);
+
+14) INSERT DELIVERY DATA
+INSERT INTO DELIVERY VALUES (301, 201, 'Rahul', 'Delivered', '30 mins'), (302, 202, 'Amit', 'Delivered', '25 mins'), (303, 203, 'Suresh', 'Pending', 'Not Assigned'), (304, 204, 'Karan', 'Delivered', '35 mins'), (305, 205, 'Deepak', 'On the Way', '20 mins');
+
+15) INSERT PAYMENT DATA
+INSERT INTO PAYMENT VALUES (401, 201, 'UPI', 'Paid', 400.00), (402, 202, 'Cash', 'Paid', 300.00), (403, 203, 'UPI', 'Pending', 320.00), (404, 204, 'Card', 'Paid', 490.00), (405, 205, 'Cash', 'Pending', 270.00);
