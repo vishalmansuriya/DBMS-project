@@ -1,0 +1,44 @@
+1) Show customer names with their city
+SELECT customer_name, city FROM CUSTOMER;
+
+2) Show food names with their prices
+SELECT food_name, price FROM FOOD;
+
+3) Show restaurant names with their location
+SELECT rest_name, location FROM RESTAURANT;
+
+4) Show order ID with total amount
+SELECT order_id, total_amount FROM ORDERS;
+
+5) Show customer names and their order dates
+SELECT C.customer_name, O.order_date FROM CUSTOMER C JOIN ORDERS O ON C.customer_id = O.customer_id;
+
+6) Show food items that cost more than 150
+SELECT food_name, price FROM FOOD WHERE price > 150;
+
+7) Show delivered orders
+SELECT order_id, status FROM ORDERS WHERE status = 'Delivered';
+
+8) Show payment method and payment status
+SELECT payment_method, payment_status FROM PAYMENT;
+
+9) Show order ID and delivery status
+SELECT order_id, delivery_status FROM DELIVERY;
+
+10) Show food name and category
+SELECT food_name, category FROM FOOD;
+
+11) Show customer names with order amount
+SELECT C.customer_name, O.total_amount FROM CUSTOMER C JOIN ORDERS O ON C.customer_id = O.customer_id;
+
+12) Show restaurant names and their food items
+SELECT R.rest_name, F.food_name FROM RESTAURANT R JOIN FOOD F ON R.rest_id = F.rest_id;
+
+13) Show food item name with quantity ordered
+SELECT F.food_name, OI.quantity FROM FOOD F JOIN ORDER_ITEMS OI ON F.food_id = OI.food_id;
+
+14) Show pending payments only
+SELECT order_id, amount FROM PAYMENT WHERE payment_status = 'Pending';
+
+15) Show customer name, order ID, and delivery person
+SELECT C.customer_name, O.order_id, D.delivery_person FROM CUSTOMER C JOIN ORDERS O ON C.customer_id
